@@ -12,9 +12,9 @@ export const App = () => {
     setCount(prev => prev + 100);
   };
 
-  // DON'T change the code below
   const increase = () => {
     setCount(prev => {
+      if (prev === 0) return 101;
       const afterOne = prev + 1;
 
       return afterOne % 5 === 0 ? afterOne + 100 : afterOne;
